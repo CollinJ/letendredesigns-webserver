@@ -8,7 +8,8 @@ def hello():
 
 @app.route('/<name>')
 def hello_name(name):
+    """ Takes a name and greets them """
     return "Hello %s!" % name
 
 if __name__ == '__main__':
-    app.run(debug=true)
+    app.run(debug=True)
