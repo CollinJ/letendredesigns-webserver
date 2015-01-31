@@ -1,0 +1,15 @@
+<div class="header">
+
+  <a href="/" class="title"></a>
+  <ul class="nav">
+            <li ng-repeat="item in list"> 
+                <a href="{{item.url}}" ng-class="{selected: $index==item.index}">{{ item.text }}</a>
+                <ul class="subnav" ng-if="item.submenu">
+                    <li ng-repeat="subitem in item.submenu">
+                        <a href="{{subitem.url}}">{{subitem.text}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+  <div class="seperator"></div>
+</div>
